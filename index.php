@@ -132,7 +132,7 @@
                 themeSystem: 'bootstrap5',
                 locale: 'pt',
                 editable: true,
-                events: 'data/events.json',
+                events: 'data/events.txt',
                 dayMaxEventRows: true, // for all non-TimeGrid views
                 views: {
                     timeGrid: {
@@ -232,7 +232,7 @@
         }
         
         function load_agenda() {
-            $.getJSON("data/events.json", function(data){
+            $.getJSON("data/events.txt", function(data){
                 data?.forEach((element,index) => {
                     array_agenda.push(element);
                 });

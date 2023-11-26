@@ -6,7 +6,7 @@ if (isset($_GET["action"]) && $_GET["action"] == "post") {
         mkdir('../data', 0777, true);
     }
     //echo $dadosJson;
-    $path = '../data/events.json';
+    $path = '../data/events.txt';
     $number = 0;
     if (file_exists($path)) {
         $jsonString = file_get_contents($path);
@@ -43,7 +43,7 @@ if (isset($_GET["action"]) && $_GET["action"] == "post") {
     echo json_encode($arr);
 } elseif (isset($_GET["action"]) && $_GET["action"] == "get") {
     # code...
-    $path = '../data/events.json';
+    $path = '../data/events.txt';
 
     $jsonString = file_get_contents($path);
     $jsonData = json_decode($jsonString, true);
@@ -51,7 +51,7 @@ if (isset($_GET["action"]) && $_GET["action"] == "post") {
     var_dump($jsonData);
 }  elseif (isset($_GET["action"]) && $_GET["action"] == "edit") {
     # code...
-    $path = '../data/events.json';
+    $path = '../data/events.txt';
     $arr = array();
 
     if (file_exists($path)) {
@@ -73,7 +73,7 @@ if (isset($_GET["action"]) && $_GET["action"] == "post") {
     
     echo json_encode($arr);
 } elseif (isset($_GET["action"]) && $_GET["action"] == "delete") {
-    $path = '../data/events.json';
+    $path = '../data/events.txt';
     $arr = array();
 
     if (file_exists($path)) {
