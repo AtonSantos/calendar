@@ -1,15 +1,1 @@
-[
-    {"id":1,"title":"Evetntos1","date":"2023-11-16","color":"#ce5050"},
-    {"id":4,"title":"eventos112","date":"2023-11-01","color":"#dc8df2"},
-    {"id":5,"title":"eventos112","date":"2023-11-01","color":"#dc8df2"},
-    {"id":6,"title":"Even4","date":"2023-11-09","color":"#ecdd79"},
-    {"id":7,"title":"lastkhg","date":"2023-11-23","color":"#999999"},
-    {"id":8,"title":"qwerty","date":"2023-11-07","color":"#78dbe8"},
-    {"id":9,"title":"dados salvos","date":"2023-11-21","color":"#c9c9c9"},
-    {"id":10,"title":"teste098","date":"2023-11-21","color":"#f2cece"},
-    {"id":11,"title":"teste lasting","date":"2023-11-11","color":"#f25a5a"},
-    {"id":12,"title":"dia 4 de novembro 111","date":"2023-11-04","color":"#63f28e"},
-    {"id":13,"title":"3333333","date":"2023-11-03","color":"#dfc3c3"},
-    {"id":14,"title":"teste42343","date":"2023-11-02","color":"#561a1a"},
-    {"id":15,"title":"teste dia 2 de 11","date":"2023-11-02","color":"#000000"}
-]
+[{"id":1,"title":"Evetntos1","date":"2023-11-16","color":"#ce5050"},{"id":4,"title":"eventos112","date":"2023-11-01","color":"#dc8df2"},{"id":6,"title":"Even4","date":"2023-11-09","color":"#ecdd79"},{"id":7,"title":"lastkhg","date":"2023-11-23","color":"#999999"},{"id":8,"title":"qwerty","date":"2023-11-07","color":"#78dbe8"},{"id":9,"title":"dados salvos","date":"2023-11-21","color":"#c9c9c9"},{"id":10,"title":"teste098","date":"2023-11-21","color":"#f2cece"},{"id":11,"title":"teste lasting","date":"2023-11-11","color":"#f25a5a"},{"id":12,"title":"dia 4 de novembro 111","date":"2023-11-04","color":"#63f28e"},{"id":13,"title":"3333333","date":"2023-11-03","color":"#dfc3c3"},{"id":15,"title":"teste dia 2 de 11","date":"2023-11-02","color":"#000000"}]
