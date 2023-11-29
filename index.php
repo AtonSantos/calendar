@@ -24,17 +24,17 @@
   <div class="container py-4">
     <header class="pb-3 mb-4 border-bottom">
         <div class="row align-items-md-stretch">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
                     <i class="fa-solid fa-calendar-days mx-2" style="font-size: 22px;"></i>
-                    <span class="fs-4">Calendario</span>
+                    <span class="fs-4 ms-4">Calendario</span>
                 </a>
             </div>
-            <!-- <div class="col-md-8 d-flex justify-content-end">
-                <button class="btn btn-primary btn-sm mx-2" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    <i class="fa-solid fa-plus me-2"></i>Novo
+            <div class="col-md-6 d-flex justify-content-end">
+                <button class="btn btn-primary btn-sm mx-2" type="button" id="btn_printing">
+                    <i class="fa-solid fa-print me-2"></i>Print Doc
                 </button>
-            </div> -->
+            </div>
         </div>
     </header>
 
@@ -173,6 +173,24 @@
                 toast.addEventListener('mouseenter', Swal.stopTimer)
                 toast.addEventListener('mouseleave', Swal.resumeTimer)
             }
+        });
+
+        $("#btn_printing").click(function(){
+            $.post("lib/event.php?action=print",function(res,status,xhd) {
+                console.log(res);
+                Swal.fire({
+                    title: "Printed!",
+                    text: "Impresso com secesso.",
+                    icon: "success",
+                    confirmButtonColor: "#3085d6",
+                    confirmButtonText: "Ok"
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                        location.reload(true);
+                    }
+                });
+               
+            },"json");
         });
 
         function deleteEvent() { 

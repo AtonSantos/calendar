@@ -1,0 +1,1 @@
+start /B "silent-printing" "C:\app\silent-printing.exe"

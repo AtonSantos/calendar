@@ -92,5 +92,20 @@ if (isset($_GET["action"]) && $_GET["action"] == "post") {
         $arr = array('seccess'=> true);
     } else { $arr = array('error_file'=> true); }
     echo json_encode($arr);
+} elseif (isset($_GET["action"]) && $_GET["action"] == "print") {
+    // args[0] = action(printing/status)
+    // args[1] = CCV
+    // args[2] = B102
+    // args[3] = #perioridade
+    // args[4] = 12/11/2023 12:11:08
+    // args[5] = Em Espera
+    // args[6] = "ticket dv845afe"
+
+    $date_time = (new \DateTime())->format('d/m/Y H:i:s');
+    $res = shell_exec('start /b C:\app\silent-printing "printing" "Casa do Cidadão" "B-104" "Criança de colo" "'.$date_time.'" 4 "\"ticket dv845afe\"" ');
+
+    $arr = array(['seccess'=> true, 'result'=> $res]);
+    var_dump($arr);
+    echo json_encode(array('seccess'=> true));
 }
 
