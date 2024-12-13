@@ -34,6 +34,12 @@
                 <button class="btn btn-primary btn-sm mx-2" type="button" id="btn_printing">
                     <i class="fa-solid fa-print me-2"></i>Print Doc
                 </button>
+                <button class="btn btn-warning btn-sm mx-2" type="button" id="btn_status">
+                    <i class="fa-solid fa-info me-2"></i>Status
+                </button>
+                <button class="btn btn-danger btn-sm mx-2" type="button" id="config">
+                    <i class="fa-solid fa-gears me-2"></i>Config
+                </button>
             </div>
         </div>
     </header>
@@ -176,19 +182,26 @@
         });
 
         $("#btn_printing").click(function(){
+            try{
+                window.open('C:\\app\\silent-printing.exe "printing" "Casa do Cidadão" "B-104" "Criança de colo" "12/12/2023 12:00:01" 4 "\"ticket dv845afe\"" 40');
+            }
+            catch(error) {
+                console.log("Something did not work...\n\n"+error.description);
+            }
+            /* Swal.fire({
+                title: "Printed!",
+                text: "Impresso com secesso.",
+                icon: "success", 
+                confirmButtonColor: "#3085d6",
+                confirmButtonText: "Ok"
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload(true);
+                }
+            }); */
             $.post("lib/event.php?action=print",function(res,status,xhd) {
                 console.log(res);
-                Swal.fire({
-                    title: "Printed!",
-                    text: "Impresso com secesso.",
-                    icon: "success",
-                    confirmButtonColor: "#3085d6",
-                    confirmButtonText: "Ok"
-                    }).then((result) => {
-                    if (result.isConfirmed) {
-                        location.reload(true);
-                    }
-                });
+                
                
             },"json");
         });
@@ -259,8 +272,6 @@
                 console.log("An error has occurred.");
             });
         }
-
-        
 
     </script>
   </body>

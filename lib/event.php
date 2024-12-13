@@ -102,10 +102,9 @@ if (isset($_GET["action"]) && $_GET["action"] == "post") {
     // args[6] = "ticket dv845afe"
 
     $date_time = (new \DateTime())->format('d/m/Y H:i:s');
-    $res = shell_exec('start /b C:\app\silent-printing "printing" "Casa do Cidadão" "B-104" "Criança de colo" "'.$date_time.'" 4 "\"ticket dv845afe\"" ');
+    $res = shell_exec('start /b C:\\app\\silent-printing.exe "printing" "Casa do Cidadão" "B-104" "Criança de colo" "'.$date_time.'" 4 "\"ticket dv845afe\"" ');
 
     $arr = array(['seccess'=> true, 'result'=> $res]);
     var_dump($arr);
     echo json_encode(array('seccess'=> true));
 }
-
